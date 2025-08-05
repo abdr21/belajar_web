@@ -1,6 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Project;
+use App\Models\Testimonial;
+use Illuminate\Routing\Controller;
 
 use Illuminate\Http\Request;
 
@@ -11,8 +14,10 @@ class HomeController extends Controller
     {
         $data = [
             'title' => 'Home Page',
-            'description' => 'Welcome to the home page of our Laravel application.'
+            'projects' => Project::latest()->take(4)->get(),
+            'testimonials'=> Testimonial::latest()->take(3)->get(),
         ];
+        //dd($data);
         return view('home.index' ,$data);
     }
 }
