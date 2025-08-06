@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     @vite('resources/css/app.css')
     @stack('styles')
+    <title>{{$title ?? env('APP_NAME')}}</title>
   </head>
   <body class="bg-gray-100 text-black-800">
   <header class="bg-white shadow h-20 ">
     <div class="container mx-auto px-6 py-16 flex justify-between items-center">
       <h1 class="text-xl font-bold text-amber-700 relative bottom-10">Al-Qomar Studio</h1>
       <nav class="space-x-4">
-        <a href="#" class="text-amber-600 hover:underline relative bottom-10">Home</a>
-        <a href="#" class="hover:underline relative bottom-10">About</a>
-        <a href="#" class="hover:underline relative bottom-10">FAQs</a>
-        <a href="#" class="hover:underline relative bottom-10">Support</a>
-        <a href="#" class="hover:underline relative bottom-10">Contact</a>
+        <a href="{{route('home')}}" class="text-amber-600 hover:underline relative bottom-10">Home</a>
+        <a href="{{route('about')}}" class="hover:underline relative bottom-10">About</a>
+        <a href="{{route('project.index')}}" class="hover:underline relative bottom-10">Project</a>
+        <a href="{{route('service')}}" class="hover:underline relative bottom-10">Service</a>
+        <a href="{{route('contact')}}" class="hover:underline relative bottom-10">Contact</a>
       </nav>
     </div>
   </header>

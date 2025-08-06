@@ -9,8 +9,8 @@
   <p class="mb-6 text-lg">Boost your own Website</p>
   <p class="mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   <div class="space-x-4">
-    <button class="bg-amber-600 text-white px-6 py-2 rounded hover:bg-amber-700">Get Started</button>
-    <button class="border border-amber-600 text-amber-600 px-6 py-2 rounded hover:bg-amber-300">Contact Us</button>
+    <a href="{{route('service')}}" class="bg-amber-600 text-white px-6 py-2 rounded hover:bg-amber-700">Get Started</a>
+    <a href="{{route('contact')}}" class="border border-amber-600 text-amber-600 px-6 py-2 rounded hover:bg-amber-300">Contact Us</a>
   </div>
 </section>
 

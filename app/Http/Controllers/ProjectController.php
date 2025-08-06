@@ -12,54 +12,30 @@ class ProjectController extends Controller
      */
     public function index()
     {
+        echo "This is the project index page";
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+    
 
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show($id)
     {
-        //
+        //echo "This is the project show page for project with ID: $id";
+        $project = Project::findOrFail($id);
+        dd($project);
+        /*$data = [
+            'title' => $project->title,
+            'project' => $project,
+            'testimonials' => $project->testimonials()->latest()->take(3)->get(),
+        ];
+        return view('projects.show', $data);*/
     }
+    
+        //
+    
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Project $project)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Project $project)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Project $project)
-    {
-        //
-    }
+   
 }

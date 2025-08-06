@@ -13,7 +13,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = [
-            'title' => 'Home Page',
+            'title' => 'Home ',
             'projects' => Project::latest()->take(4)->get(),
             'testimonials'=> Testimonial::latest()->take(3)->get(),
         ];
