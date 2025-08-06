@@ -235,7 +235,7 @@
     "Category ID": "ID Kategori",
     "Project": "Proyek",
     "Project Name": "Nama Proyek",
-    "Project Title": "Judul Proyek",
+    "Project Title": "Project Title",
     "Project Content": "Konten Proyek",
     "Project Image": "Gambar Proyek",
     "Project Name Placeholder": "Masukkan nama proyek",
@@ -248,20 +248,37 @@
     "Position": "Posisi",
     "Company": "Perusahaan",
     "Message": "Pesan",
-    "Testimonials for :project": "Testimoni untuk :project",
+    "Testimonials for :project": "Testimonial for :project",
     "Testimonial": "Testimonial",
     "Images": "Gambar",
 
     "Images for :project": "Gambar untuk :project",
-    "Description": "Deskripsi"
+    "Description": "Deskripsi",
 
-
+    "Al-Qomar Studio": "Studio Al-Qomar",
+    
+    "About": "Tentang",
+    
+    "Service": "Layanan",
+    "Contact": "Kontak",
+    "One Stop Solution for Car Maintenance and Modification": "Solusi Lengkap untuk Perawatan dan Modifikasi Mobil",
+    "Boost your own Website": "Tingkatkan Website Anda",
+    "Car Service – Top Performance, Safe on the Road": "Servis Mobil – Performa Prima, Aman di Jalan",
+    "Car Wash – Shiny Like New": "Cuci Mobil – Kinclong Seperti Baru",
+    "Car Modification – Look Different, Look Cooler": "Modifikasi Mobil – Tampil Beda, Lebih Keren",
+    "Get Started": "Mulai",
+    "Contact Us": "Hubungi Kami",
+    "Latest Projects": "Proyek Terbaru",
+    "Customer Testimonials": "Testimoni Pelanggan",
+    "View All Project": "Lihat Semua Proyek",
+    
+    "Testimonial for :project": "Testimoni untuk :project",
+    "Project for :category": "Proyek untuk :kategori",
+   
     
     
-
     
-
-
-
-
+    "See More": "Lihat Selengkapnya",
+    "Date": "Tanggal",
+    "Project Category": "Kategori Proyek"
 }

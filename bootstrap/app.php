@@ -3,6 +3,9 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+use Illuminate\Foundation\Configuration\Middleware as MiddlewareConfiguration;
+use App\Http\Middleware\EnsureTokenIsValid;
+use App\Http\Middleware\CheckLanguage;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -11,8 +14,16 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+         //$middleware->append([
+            //App\Http\Middleware\CheckLanguage::class
+        //]);
+        $middleware->web(append:[
+            App\Http\Middleware\CheckLanguage::class
+        ]);
+
+    })                                  
         //
-    })
+    
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();

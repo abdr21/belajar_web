@@ -8,6 +8,16 @@ Route::get('/projects/{id}', [App\Http\Controllers\ProjectController::class, 'sh
 Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
 Route::get('/contact', [App\Http\Controllers\ContactController::class, 'index'])->name('contact');
 Route::get('/service', [App\Http\Controllers\ServiceController::class, 'index'])->name('service');
+
+//buatkan route untuk language switcher
+Route::get('/lang/{locale}', function ($locale) {
+    if (in_array($locale, ['en', 'id'])) {
+        session()->put('locale', $locale);
+        //app()->setLocale($locale);
+        //dd(session()->get('locale')); // Debugging line to check the locale
+    }
+    return redirect()->back();
+})->name('lang.switch');
 //make route for project controller custom name per resource
 /*Route::resource('projects', App\Http\Controllers\ProjectController::class)->names([
     'index' => 'projects.index',
