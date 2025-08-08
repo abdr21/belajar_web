@@ -23,13 +23,16 @@
       <button id="darkModeToggle" class="ml-4 px-3 py-1 rounded bg-sky-700 text-white hover:bg-sky-900 dark:bg-sky-300 dark:text-gray-900 dark:hover:bg-amber-500">
         🌙
       </button>
-      <!-- Language switcher : indonesian & english-->
-      <div class="ml-4">
-        <a href="{{ route('lang.switch', ['locale' => 'en']) }}" class="text-sm hover:underline dark:hover:text-sky-300">EN</a>
-        <span class="mx-2">|</span>
-        <a href="{{ route('lang.switch', ['locale' => 'id']) }}" class="text-sm hover:underline dark:hover:text-sky-300">ID</a>
+      <!-- Language switcher with globe icon -->
+      <div class="ml-4 relative">
+        <button id="langSwitcherBtn" class="text-xl focus:outline-none hover:text-sky-300 dark:hover:text-sky-300">
+          <i class="bi bi-globe"></i>
+        </button>
+        <div id="langDropdown" class="hidden absolute right-0 mt-2 w-28 bg-white dark:bg-gray-800 rounded shadow-lg border dark:border-gray-700 z-30">
+          <a href="{{ route('lang.switch', ['locale' => 'en']) }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-sky-100 dark:hover:bg-gray-700">English</a>
+          <a href="{{ route('lang.switch', ['locale' => 'id']) }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-sky-100 dark:hover:bg-gray-700">Indonesia</a>
+        </div>
       </div>
-     
     </div>
     
   </header>
@@ -79,7 +82,22 @@
       htmlTag.classList.remove('dark');
       toggleBtn.textContent = '🌙';
     }
-    
+
+    // Language switcher dropdown
+    const langBtn = document.getElementById('langSwitcherBtn');
+    const langDropdown = document.getElementById('langDropdown');
+
+    langBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      langDropdown.classList.toggle('hidden');
+    });
+
+    // Hide dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!langDropdown.classList.contains('hidden')) {
+        langDropdown.classList.add('hidden');
+      }
+    });
   </script>
   </body>
     <!--<h1 class="text-3xl font-bold underline">
